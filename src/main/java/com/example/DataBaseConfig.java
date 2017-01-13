@@ -38,7 +38,7 @@ public class DataBaseConfig {
     }
 
     @Bean
-    public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean() {
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
         entityManagerFactory.setDataSource(dataSource());
         entityManagerFactory.setPackagesToScan(
@@ -74,7 +74,7 @@ public class DataBaseConfig {
         JpaTransactionManager transactionManager =
                 new JpaTransactionManager();
         transactionManager.setEntityManagerFactory(
-                entityManagerFactoryBean().getObject());
+                entityManagerFactory().getObject());
         return transactionManager;
     }
 
