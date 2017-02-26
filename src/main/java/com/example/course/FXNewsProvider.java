@@ -33,4 +33,8 @@ public class FXNewsProvider {
 	}
 	
 	
+	public void getAndPersistNews() {
+		System.out.println("test");
+	}
+	
 }
