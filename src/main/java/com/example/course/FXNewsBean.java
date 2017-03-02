@@ -1,5 +1,5 @@
 package com.example.course;
 
-public interface IFXNewsListener {
+public class FXNewsBean {
 
 }
